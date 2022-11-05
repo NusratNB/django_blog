@@ -1,5 +1,5 @@
 {
-    "python.analysis.typeCheckingMode": "basic",
+    // "python.analysis.typeCheckingMode": "basic",
     "python.languageServer": "Pylance",
     "files.associations": {
         "**/*.html": "html",
@@ -7,5 +7,8 @@
         "**/templates/**/*": "django-text",
         "**/requirements{/**,*}.{txt,in}": "pip-requirements"
     },
-    "emmet.includeLanguages": {"django-html": "html"}
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "python.analysis.typeCheckingMode": "off"
 }
