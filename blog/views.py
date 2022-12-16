@@ -2,6 +2,7 @@ from django.shortcuts import render, get_list_or_404
 from django.views.generic import ListView, DetailView
 
 from .models import Post
+from .forms import CommentForm
 
 
 class StartingPageView(ListView):
@@ -22,6 +23,7 @@ class StartingPageView(ListView):
 #         "posts": latest_posts
 #     })
 
+
 class PostsView(ListView):
     template_name = "blog/all-posts.html"
     model = Post
@@ -34,6 +36,7 @@ class PostsView(ListView):
 #         "all_posts": all_posts
 #     })
 
+
 class PostDetailView(DetailView):
     template_name = "blog/post-detail.html"
     model = Post
@@ -41,6 +44,7 @@ class PostDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['post_tags'] = self.object.tag.all()
+        context['comment_form'] = CommentForm()
         return context
 
 # def post_detail(request, slug):
@@ -49,5 +53,3 @@ class PostDetailView(DetailView):
 #         "post":  identified_post,
 #         "post_tags": identified_post.tag.all()
 #     })
-
-         
