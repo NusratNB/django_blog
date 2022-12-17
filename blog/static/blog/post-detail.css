@@ -110,8 +110,8 @@ main {
   display: block;
 }
 
-.form-contorl input,
-.form-contorl textarea {
+.form-control input,
+.form-control textarea {
   display: block;
   width: 100%;
   font: inherit;
