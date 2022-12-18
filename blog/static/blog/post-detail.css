@@ -22,7 +22,7 @@ body {
 #summary h2 {
   color: white;
   font-size: 4.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 #summary article {
@@ -50,12 +50,31 @@ body {
 
 #summary a {
   color: white;
-  text-decoration: None
+  text-decoration: none;
 }
 
 #summary time {
   font-weight: bold;
-} 
+}
+
+#read-later {
+  margin: 2rem 0;
+}
+
+#read-later button {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 0.5rem 2rem;
+  font: inherit;
+  color: white;
+  cursor: pointer;
+}
+
+#read-later button:hover,
+#read-later button:active {
+  background-color: white;
+  color: #390281;
+}
 
 main {
   width: 90%;
@@ -67,14 +86,14 @@ main {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
-.tag{
+.tag {
   background-color: white;
   color: #390281;
   padding: 0.5rem 1rem;
   border-radius: 8px;
 }
 
-#comment-form{
+#comment-form {
   margin: 3rem auto;
   width: 90%;
   max-width: 40rem;
@@ -87,7 +106,7 @@ main {
 #comment-form button {
   font: inherit;
   background-color: #390281;
-  color:  white;
+  color: white;
   border: 1px solid #390281;
   padding: 0.5rem 1.5rem;
   border-radius: 6px;
@@ -100,7 +119,7 @@ main {
   border-color: #4f0ba7;
 }
 
-.form-contorl {
+.form-control {
   margin-bottom: 1rem;
 }
 
@@ -137,7 +156,7 @@ main {
   background-color: #ffe6e7;
 }
 
-#alert{
+#alert {
   margin: 8rem auto 3rem auto;
   border: 1px solid #d6000b;
   background-color: #ffe6e7;
@@ -146,11 +165,40 @@ main {
   max-width: 40rem;
 }
 
-#alert a{
+#alert a {
   text-decoration: none;
   border: 1px solid #d6000b;
   background-color: #d6000b;
   color: white;
   padding: 0.25rem 1.5rem;
   border-radius: 6px;
+}
+
+#comments {
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 60rem;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  padding: 1rem 2rem;
+}
+
+#comments ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#comments li {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+}
+
+#comments li:last-of-type {
+  border-bottom: none;
+}
+
+#comments h2 {
+  color: #464646;
 }
