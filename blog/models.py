@@ -32,7 +32,7 @@ class Post(models.Model):
     content = models.TextField(validators=[MinLengthValidator(10)])
     author = models.ForeignKey(
         Author, on_delete=models.SET_NULL, null=True, related_name='posts')
-    tag = models.ManyToManyField(Tag, null=False, related_name="posts")
+    tag = models.ManyToManyField(Tag)
 
 
 class Comment(models.Model):

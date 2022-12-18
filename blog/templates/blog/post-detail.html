@@ -15,8 +15,9 @@ This Post Title
     <div id="alert">
       <h2> Saving the comment failed! </h2>
       <p>Please check the comment form below the post and fix your errors.</p>
+      <a href="#comment-form">Fix!</a>
     </div>
-  {% endfor %}
+{% endif %}
 
   <section id='summary'>
     <h2>{{post.title}}</h2>
@@ -41,6 +42,17 @@ This Post Title
   <main>
     {{post.content|linebreaks}}
   </main>
+
+  <section id="comments">
+    <ul>
+      {% for comment in comments %}
+        <li>
+          <h2> {{ comment.user_name }} </h2>
+          <p> {{ comment.text|linebreaks }} </p>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 
   <section id="comment-form">
     <h2>Your comment</h2>
